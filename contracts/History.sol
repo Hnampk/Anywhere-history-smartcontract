@@ -10,7 +10,7 @@ contract History {
     
     /** 
      *  Add a step in a specific day
-     *  date: ddmmyyyy (ex: 16092018 - Sep 16th 2018)
+     *  date: mmddyyyy (ex: 9162018 - Sep 16th 2018)
      *  step: lat,lng,time (ex: 21.027763,105.834160,1538758453973)
      */
     function addStep(uint date, string step) public{
@@ -21,7 +21,7 @@ contract History {
     /**
      *  Get a single step by address, time and index of step in day
      *  addr: target address
-     *  date: ddmmyyyy (ex: 16092018 - Sep 16th 2018)
+     *  date: mmddyyyy (ex: 9162018 - Sep 16th 2018)
      *  index: index of that step
      */
     function getStep(address addr, uint date, uint index) public view returns(string){
@@ -34,7 +34,7 @@ contract History {
     /**
      *  Get the number of steps in a specific day
      *  addr: target address
-     *  date: ddmmyyyy (ex: 16092018 - Sep 16th 2018)
+     *  date: mmddyyyy (ex: 9162018 - Sep 16th 2018)
      */
     function getStepsValue(address addr, uint date) public view returns(uint){
         return stepsValue[addr][date];
